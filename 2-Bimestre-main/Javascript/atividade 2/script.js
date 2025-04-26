@@ -8,11 +8,11 @@ function trocoNumero(){
     let num1 = Number(numero1.value);
     let num2 = Number(numero2.value);
 
-    h3resultado.textContent = (num1 + num2);
+    h3resultado.textContent = (num1 - num2);
 
 
 }
 
 botaoSomar.onclick = function(){
-    Numero();
+    trocoNumero();
 }
