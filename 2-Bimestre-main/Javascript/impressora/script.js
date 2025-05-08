@@ -7,15 +7,38 @@ let ponderada = document.querySelector("#ponderada");
 let somaMedias = document.querySelector("#somaMedias");
 let media = document.querySelector("#media");
 
-function calcularMedias(){
+function calcularAri(){
  let num1 = Number(numero1.value);
  let num2 = Number(numero2.value);
  let num3 = Number(numero3.value);
- aritmetrica.textContent = (num1 + num2 + num3)/3;
- ponderada.textContent = (num1 * 3 + num2 * 2 +  num3*5)/10;
- somaMedias.textContent = aritmetrica + ponderada;
- media.textContent = (somaMedias / 2);                 
+ let resultadoa =(num1 + num2 + num3 )/3;
+
+ aritmetrica.textContent = resultadoa;
+ return resultadoa;
+            
+}
+function calcularPon(){
+let num1 = Number(numero1.value);
+ let num2 = Number(numero2.value);
+ let num3 = Number(numero3.value);
+let resultadob = (num1 * 2) + (num2 * 3) +  (num3*5);
+    ponderada.textContent = resultadob;
+    return resultadob;
+}
+function calcularSoma(){
+       let resultadoc = ( calcularAri()+calcularPon()+2);
+       somaMedias.textContent = resultadoc;
+       return resultadoc;
+    
+}
+function calcularMedia(){
+   let resultadod = (calcularSoma() / 2)
+    media.textContent = resultadod;     
+    return media
 }
 botaoSomar.onclick = function(){
-    calcularMedias();
+    calcularAri();
+    calcularPon();
+    calcularSoma();
+    calcularMedia()
 }
