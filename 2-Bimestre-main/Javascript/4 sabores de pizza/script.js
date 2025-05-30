@@ -17,7 +17,7 @@ function pizza(){
    
 
     let text2 = segundoSabor.value;
-    sabor2.textContent=(text2)
+    sabor2.textContent=(text2);
 
     let text3 = terceiroSabor.value;
     sabor3.textContent=(text3);
